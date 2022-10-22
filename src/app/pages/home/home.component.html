@@ -1,0 +1,25 @@
+<div class="page">
+    <div class="container">
+        <img class="icon" src="https://cdn.kryt.xyz/resources/icons/grow-butler.png">
+
+        <mat-card>
+            <div class="padding">
+                <h1>Which plant are you monitoring today, sir?</h1>
+
+                <mat-form-field appearance="fill">
+                    <mat-label></mat-label>
+                    <mat-select disableOptionCentering [(value)]="plant">
+                        <mat-option *ngFor="let plant of availablePlants" [value]="plant.value">
+                            {{plant.view}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button mat-button class="upload-button" (click)="updatePlant()">
+                    <mat-icon>cloud_upload</mat-icon>
+                    <span>Submit</span>
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>
