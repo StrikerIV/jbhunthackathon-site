@@ -10,15 +10,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModules } from 'material.module';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     RouterModule.forRoot([
-      { path: '', component: HomeComponent }
+      { path: '', component: HomeComponent },
+      { path: 'user', component: UserComponent, title: "Grow Butler - Change user" }
     ]),
     HttpClientModule,
     BrowserModule,

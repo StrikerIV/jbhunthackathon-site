@@ -1,0 +1,21 @@
+<div class="page">
+    <div class="container">
+        <mat-card class="user-card">
+            <div class="wrap">
+                <img class="icon" src="https://cdn.kryt.xyz/resources/icons/grow-butler.png">
+
+                <h1 class="change-user">Change the user</h1>
+
+                <div class="users">
+                    <mat-card *ngFor="let user of users" class="user">
+                        <div class="user">
+                            <img class="pfp-icon" src="https://cdn.kryt.xyz/resources/icons/grow-butler.png">
+                            <h2 class="name">{{ user.name }}</h2>
+                            <button mat-raised-button color="primary" (click)="changeUser(user)">Change</button>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -4,11 +4,13 @@
 
         <mat-card>
             <div class="padding">
-                <h1>Which plant are you monitoring today, sir?</h1>
+                <span class="welcome">Welcome, {{currentUser.name}}.</span>
+                <h1 class="ask">Which plant are you monitoring today, {{currentUser.gender == "male" ? "sir" :
+                    "madam"}}?</h1>
 
                 <mat-form-field appearance="fill">
                     <mat-label></mat-label>
-                    <mat-select disableOptionCentering [(value)]="plant">
+                    <mat-select disableOptionCentering [(value)]="plantText" (selectionChange)="updateCard()">
                         <mat-option *ngFor="let plant of availablePlants" [value]="plant.value">
                             {{plant.view}}
                         </mat-option>
@@ -21,5 +23,23 @@
                 </button>
             </div>
         </mat-card>
+
+        <mat-card *ngIf="plantText" class="plant-information">
+            <div class="padding">
+                <h1>Plant information</h1>
+                <h2>{{selectedPlant.view}}</h2>
+                <span class="info" style="margin-top: 35px; margin-bottom: 15px">On Cycle: {{selectedPlant.cycle.on}}
+                    hour{{ selectedPlant.cycle.on == 1 ? "" : "s" }}</span>
+                <span class="info">Off Cycle: {{selectedPlant.cycle.off}} hour{{ selectedPlant.cycle.off == 1 ? "" : "s"
+                    }}</span>
+            </div>
+        </mat-card>
     </div>
+</div>
+
+<div class="change-user">
+    <button mat-button class="change-user-button" (click)="changeUser()">
+        <mat-icon class="cicon">person</mat-icon>
+        <span>Change User</span>
+    </button>
 </div>

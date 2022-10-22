@@ -24,9 +24,21 @@
     border: 1px solid lightgray;
 }
 
+.welcome {
+    font-family: "Dancing Script";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.ask {
+    margin-bottom: 50px;
+}
+
 .mat-card {
     box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
 }
+
 
 .padding {
     display: flex;
@@ -38,7 +50,11 @@
 h1 {
     font-family: "Dancing Script";
     font-size: 40px;
-    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: "Dancing Script";
+    font-size: 30px;
 }
 
 .upload-button mat-icon {
@@ -53,4 +69,39 @@ h1 {
 .upload-button {
     margin-top: 25px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.plant-information {
+    font-family: "Dancing Script";
+    margin-top: 50px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    font-size: 25px;
+}
+
+.change-user {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.change-user-button {
+    margin-top: 25px;
+    margin-right: 25px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 4px 8px 4px 8px;
+}
+
+.change-user-button mat-icon {
+    margin-right: 15px;
+}
+
+.change-user-button span {
+    font-family: "Dancing Script";  
+    font-size: 20px;
 }
